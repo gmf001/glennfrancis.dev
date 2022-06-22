@@ -1,0 +1,17 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+const { href, title, body } = Astro.props;
+---
+
+<a class="rounded-lg bg-white shadow-sm border px-6 py-8 group space-y-3" {href} target="_blank">
+	<h2 class="font-bold tracking-tight text-lg transition-colors duration-200 ease-in-out group-hover:text-pink-600">
+		{title}
+	</h2>
+	<p class="text-xs font-medium text-gray-400">
+		{body}
+	</p>
+</a>

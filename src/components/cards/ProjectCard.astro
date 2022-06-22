@@ -1,0 +1,24 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+	image: string;
+}
+const { href, title, body, image } = Astro.props;
+---
+
+<a {href} target="_blank" class="overflow-hidden  group">
+	<div class="w-full h-72 rounded-lg aspect-w-1 aspect-h-1 overflow-hidden bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+		<img alt={title} src={image} class="h-full w-full object-cover object-top" />
+	</div>
+
+	<div class="flex flex-col space-y-2 py-5 px-2">
+		<h2 class="font-bold text-2xl transition-all duration-200 ease-in group-hover:text-pink-600">
+			{title}
+		</h2>
+		<p class="text-base font-semibold text-gray-400">
+			{body}
+		</p>
+	</div>
+</a>
