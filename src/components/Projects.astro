@@ -1,15 +1,21 @@
 ---
 import ProjectCard from "./cards/ProjectCard.astro";
-import sdScreenshot from "../../public/sd-screenshot.png"
-import covidScreenshot from '../../public/covid-screenshot.png'
+import sd from "/sd-screenshot.png"
+import covid from '/covid-screenshot.png'
+import screenshotty from '/screenshotty.png'
+import tradetracker from '/trade-tracker.png'
 ---
 
 <section class="my-14 space-y-10">
 	<h2 class="font-bold text-3xl tracking-tight">Projects</h2>
 	<div class="grid md:grid-cols-2 gap-4 md:gap-8">
-		<ProjectCard title="Social Dashboard" body="Track your social platform analytics"
-			href="https://socialdash.glennfrancis.dev" image={sdScreenshot} />
-		<ProjectCard image={covidScreenshot} title="Covid Dashboard" body="Track current covid cases in Australia"
-			href="https://covid.glennfrancis.dev" />
+		<ProjectCard image={sd} title='Social Dashboard' body="Track your social platform analytics"
+			href="https://socialdash.glennfrancis.dev" tags={["next", "tailwind" , "prisma" , "mongodb" ]} />
+		<ProjectCard image={covid} title="Covid Dashboard" body="Track current covid cases in Australia"
+			href="https://covid.glennfrancis.dev" tags={["vue", "windicss" ]} />
+		<ProjectCard image={screenshotty} title="Screenshotty" body="Generate professional website screenshots"
+			href="https://screenshotty.glennfrancis.dev" tags={["next", "tailwind" , "puppeteer" ]} />
+		<ProjectCard image={tradetracker} title="Trade Tracker" body="A better way to track your stock portfolio"
+			href="https://tradetracker.glennfrancis.dev" tags={["next", "tailwind" , "prisma" , "mysql" ]} />
 	</div>
 </section>

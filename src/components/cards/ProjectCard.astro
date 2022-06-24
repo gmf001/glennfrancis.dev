@@ -4,8 +4,9 @@ export interface Props {
 	body: string;
 	href: string;
 	image: string;
+	tags?: string[]
 }
-const { href, title, body, image } = Astro.props;
+const { href, title, body, image, tags } = Astro.props;
 ---
 
 <a {href} target="_blank" class="overflow-hidden  group">
@@ -14,12 +15,18 @@ const { href, title, body, image } = Astro.props;
 		<img alt={title} src={image} class="h-full w-full object-cover object-top" />
 	</div>
 
-	<div class="flex flex-col space-y-2 py-5 px-2">
-		<h2 class="font-bold text-2xl transition-all duration-200 ease-in group-hover:text-pink-600">
-			{title}
-		</h2>
-		<p class="text-base font-medium text-gray-600">
-			{body}
-		</p>
+	<div class="flex flex-col space-y-3 py-5 px-2">
+		<div class="flex flex-col space-y-1">
+			<h2 class="font-bold text-2xl transition-all duration-200 ease-in group-hover:text-pink-600">
+				{title}
+			</h2>
+			<p class="text-base font-medium text-gray-600">
+				{body}
+			</p>
+		</div>
+
+		<div class="flex space-x-3 text-pink-600 text-sm font-medium">
+			{tags?.map((t) => <div>{t}</div>)}
+		</div>
 	</div>
 </a>
