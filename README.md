@@ -6,5 +6,4 @@ https://glennfrancis.dev
 
 - Astro
 - Tailwind
-- Screenshots: screenshotty.glennfrancis.dev
-- Mockups: screely.com
+- Mockups: mockshot.glennfrancis.dev/

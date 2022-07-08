@@ -6,6 +6,10 @@ export interface Props {
 const { title } = Astro.props as Props;
 ---
 
+<style is:global>
+	@import '/styles/global.css';
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +19,9 @@ const { title } = Astro.props as Props;
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<title>{title}</title>
 	<meta name="description" content="Software development">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
-		rel="stylesheet">
 </head>
 
-<body class="bg-white text-gray-800 font-inter">
+<body>
 	<slot />
 </body>
 

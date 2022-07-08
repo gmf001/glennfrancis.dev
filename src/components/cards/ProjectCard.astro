@@ -10,22 +10,21 @@ const { href, title, body, image, tags } = Astro.props;
 ---
 
 <a {href} target="_blank" class="overflow-hidden  group">
-	<div
-		class="w-full h-72 rounded-lg shadow-sm aspect-w-1 aspect-h-1 overflow-hidden bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+	<div class="w-full h-72 rounded shadow-sm aspect-w-1 aspect-h-1 overflow-hidden bg-dark xl:aspect-w-7 xl:aspect-h-8">
 		<img alt={title} src={image} class="h-full w-full object-cover object-top" />
 	</div>
 
-	<div class="flex flex-col space-y-3 py-5 px-2">
-		<div class="flex flex-col space-y-1">
-			<h2 class="font-bold text-2xl transition-all tracking-tight duration-200 ease-in group-hover:text-pink-600">
+	<div class="flex flex-col space-y-5 py-5 px-2">
+		<div class="flex flex-col space-y-2">
+			<h2 class="font-bold text-2xl transition-all tracking-tight duration-200 ease-in group-hover:text-pink-300">
 				{title}
 			</h2>
-			<p class="text-base font-medium text-gray-600">
+			<p class="text-base font-semibold text-gray-400">
 				{body}
 			</p>
 		</div>
 
-		<div class="flex space-x-3 text-pink-600 text-sm font-medium">
+		<div class="flex space-x-3 text-pink-300 text-sm font-semibold">
 			{tags?.map((t) => <div>{t}</div>)}
 		</div>
 	</div>

@@ -9,9 +9,9 @@ const { title, icon } = Astro.props;
 ---
 
 <div
-	class="flex flex-col bg-gray-100 rounded-lg border border-gray-200 p-4 h-32 w-full justify-center items-center text-center text-gray-800 space-y-4 transition-colors duration-200 ease-in-out hover:text-pink-600">
+	class="flex flex-col bg-darkSecondary rounded-lg border border-gray-700/50 p-4 h-32 w-full justify-center items-center text-center text-white space-y-4 transition-colors duration-200 ease-in-out hover:text-pink-300">
 	<div>
 		<Icon name={icon} class="h-8 w-8" />
 	</div>
-	<p class="uppercase font-bold tracking-tight w-full truncate text-xs">{title}</p>
+	<p class="uppercase font-semibold tracking-wide w-full truncate text-xs">{title}</p>
 </div>
