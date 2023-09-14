@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import Icon from 'astro-icon';
+---
+
+<section class="relative">
+  <div style="background: radial-gradient(ellipse 80% 65% at 50% -20%,rgba(120,119,198,0.3),transparent);" class="py-16 sm:py-32">
+    <div class="container flex md:flex-row flex-col items-center">
+    <div
+      class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-0 items-center text-center space-y-5 lg:space-y-6 z-10"
+    >
+      <h1 class="font-bold sm:text-7xl text-4xl uppercase">
+        Glenn Francis
+      </h1>
+      <h3
+        class="text-xl lg:text-3xl font-bold py-2 px-5 leading-none border-2 border-primary-accent rounded-2xl text-primary-accent uppercase"
+      >
+        {"<"}Full Stack Developer{" />"}
+      </h3>
+      <p class="mb-6 text-xl sm:text-2xl font-semibold text-slate-300 lg:max-w-lg">
+        I design & build interactive interfaces on the web. Below you'll find
+        some of the projects i've been working on in my free time.
+      </p>
+      <div class="hidden lg:inline-flex space-x-4 items-center justify-center">
+        <a
+          href="https://github.com/gmf001"
+          target="_blank"
+          class="p-3.5 rounded-full border-2 border-primary-accent/80 text-primary-accent hover:border-primary-accent hover:text-primary-accent cursor-pointer"
+        >
+          <Icon name="uim:github-alt" class="h-4 w-4" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/glenn-francis/"
+          target="_blank"
+          class="p-3.5 rounded-full border-2 border-primary-accent/80 text-primary-accent hover:border-primary-accent hover:text-primary-accent cursor-pointer"
+        >
+          <Icon name="dashicons:linkedin" class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+    <div
+      class="hidden xl:block xl:max-w-lg xl:w-full"
+    >
+      <Image
+        alt="Glenn Francis"
+        src="/images/cyberpunk.png"
+        width={500}
+        height={500}
+        class="px-10 -mb-24 -mt-10 pb-16 sm:p-0 opacity-30"
+      />
+    </div>
+    </div>
+  </div>
+</section>

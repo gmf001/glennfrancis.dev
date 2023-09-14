@@ -1,0 +1,17 @@
+---
+import Project from './project.astro';
+import { projects } from '../../data';
+---
+
+<section class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8">
+  {
+    projects.map((p) => (
+      <Project
+        image={p.image}
+        title={p.title}
+        body={p.description}
+        url={p.url}
+      />
+    ))
+  }
+</section>

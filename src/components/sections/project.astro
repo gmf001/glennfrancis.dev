@@ -1,0 +1,43 @@
+---
+import { Icon } from 'astro-icon';
+import { Image } from 'astro:assets';
+const { url, title, body, image } = Astro.props;
+
+export interface Props {
+  title: string;
+  body: string;
+  image: string;
+  url: string;
+}
+---
+
+<a href={url} target="_blank" class="overflow-hidden relative rounded-2xl border border-slate-800/80 group" style="background: radial-gradient(ellipse at center,rgba(120,119,198,0.15),transparent);">
+
+    <div class="h-40 sm:h-64 rounded-t-lg relative overflow-hidden">
+      <Image
+        alt={title}
+        src={image}
+        width={800}
+        height={550}
+        format="webp"
+        class="w-full min-h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-300 ease-in-out"
+      />
+    </div>
+
+
+  <div class="flex flex-col space-y-5 py-5 px-6 justify-between h-48 md:h-40">
+        <div class="flex flex-col h-full justify-between">
+          <div class="space-y-2">
+            <h2 class="font-bold text-3xl">
+              {title}
+            </h2>
+            <p class="font-semibold text-base sm:text-xl text-slate-300">
+              {body}
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+
+</a>
