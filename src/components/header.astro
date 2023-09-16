@@ -1,10 +1,11 @@
 ---
 import { Image } from 'astro:assets';
+import cyberpunkImage from '../images/cyberpunk.png';
 import Icon from 'astro-icon';
 ---
 
 <section class="relative">
-  <div style="background: radial-gradient(ellipse 80% 65% at 50% -20%,rgba(120,119,198,0.3),transparent);" class="py-16 sm:py-32">
+  <div style="background: radial-gradient(ellipse 80% 55% at 70% -20%,rgba(120,119,198,0.1),transparent);" class="py-16 sm:py-32">
     <div class="container flex md:flex-row flex-col items-center">
     <div
       class="lg:flex-grow md:w-full lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-0 items-center text-center space-y-5 lg:space-y-6 z-10"
@@ -39,14 +40,14 @@ import Icon from 'astro-icon';
       </div>
     </div>
     <div
-      class="hidden xl:block xl:max-w-lg xl:w-full"
+      class="hidden xl:flex xl:justify-end xl:w-full"
     >
       <Image
         alt="Glenn Francis"
-        src="/images/cyberpunk.png"
+        src={cyberpunkImage}
         width={500}
-        height={500}
-        class="px-10 -mb-24 -mt-10 pb-16 sm:p-0 opacity-30"
+        height={500 / 1.5}
+        class="px-10 -mb-24 -mt-10 pb-16 sm:p-0 opacity-20"
       />
     </div>
     </div>

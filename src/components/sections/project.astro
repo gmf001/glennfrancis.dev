@@ -11,16 +11,16 @@ export interface Props {
 }
 ---
 
-<a href={url} target="_blank" class="overflow-hidden relative rounded-2xl border border-slate-800/80 group" style="background: radial-gradient(ellipse at center,rgba(120,119,198,0.15),transparent);">
+<a href={url} target="_blank" class="overflow-hidden bg-dark-accent relative rounded-2xl border border-slate-900 group" >
 
     <div class="h-40 sm:h-64 rounded-t-lg relative overflow-hidden">
       <Image
         alt={title}
         src={image}
         width={800}
-        height={550}
+        height={800}
         format="webp"
-        class="w-full min-h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-300 ease-in-out"
+        class="opacity-90"
       />
     </div>
 
@@ -28,7 +28,7 @@ export interface Props {
   <div class="flex flex-col space-y-5 py-5 px-6 justify-between h-48 md:h-40">
         <div class="flex flex-col h-full justify-between">
           <div class="space-y-2">
-            <h2 class="font-bold text-3xl">
+            <h2 class="font-bold text-3xl xl:text-4xl group-hover:text-primary-accent transition duration-300 ease-in-out">
               {title}
             </h2>
             <p class="font-semibold text-base sm:text-xl text-slate-300">
